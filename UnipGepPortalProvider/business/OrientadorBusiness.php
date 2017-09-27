@@ -21,7 +21,11 @@
 				 */
 				public function findAll()
 				{
-					$query = "select * from Orientador";
+					$query = "select o.idOrientador, i.sigla as siglaInstituicao,
+					o.nome as nomeOrientador, o.cpf,
+					o.titulacao, o.ativo
+					from Orientador o
+					join Instituicao i on i.idInstituicao = o.idInstituicao";
 					$rs = $this->con->getConnection()->query($query);
 
 					$collection = $rs->fetchAll( PDO::FETCH_OBJ );

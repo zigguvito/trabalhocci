@@ -33,16 +33,20 @@
                         <thead>
                         <tr>
                             <th>Código</th>
-                            <th>Sigla</th>
-                            <th>Descrição</th>
+                            <th>Instituição</th>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Titulação</th>
                             <th>Ativo</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr ng-repeat="orientador in collectionOrientador" >
                             <th scope="row">{{orientador.idOrientador}}</th>
-                            <td>{{orientador.sigla}}</td>
-                            <td>{{orientador.descricao}}</td>
+                            <td>{{orientador.siglaInstituicao}}</td>
+                            <td>{{orientador.nomeOrientador}}</td>
+                            <td>{{orientador.cpf}}</td>
+                            <td>{{orientador.titulacao}}</td>                            
                             <td>{{orientador.ativo}}</td>
                             <td style="width: 20px;">
                                 <button ng-click="openWindow(orientador)" type="button" class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i></button>
