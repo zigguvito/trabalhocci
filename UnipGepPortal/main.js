@@ -1,4 +1,4 @@
-var API_URL = "http://localhost/UnipGepPortalProvider/";
+var API_URL = "http://localhost/trabalhocci/UnipGepPortalProvider/";
 var Sessao = {
     instituicao : {
 

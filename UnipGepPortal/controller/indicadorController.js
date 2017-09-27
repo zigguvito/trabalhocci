@@ -39,6 +39,21 @@ app.controller("IndicadorController", ["$scope","$http", function($scope,$http){
             alert("Ocorreu um erro");
         });
 
+        $http({
+            method: 'GET',
+            url: API_URL + "api/aluno/indicador?idAluno=" + Sessao.aluno.idAluno
+        }).then(function successCallback(response) {
+
+            var data = response.data;
+            $scope.indicadorTotalCursos = data.totalCursos;
+            $scope.indicadorTotalAlunos = data.totalAlunos;
+            $scope.indicadorTotalOrientadores = data.totalOrientadores;
+            $scope.indicadorTotalPublicacoes = data.totalPublicacoes;
+
+        }, function errorCallback(response) {
+            alert("Ocorreu um erro");
+        });
+
     };
 
     /**

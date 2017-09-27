@@ -32,35 +32,29 @@ app.controller("IndexController", ["$scope", function($scope){
      * Abrir Módulo - Aluno
      */
     $scope.onClickShowAluno = function(){
-        $scope.loadView =  'view/alunoView.html';        
+        $scope.loadView =  'view/alunoView.html';
     }
     
-    /**
-     * Abrir Módulo - Orientador
-     */
-    $scope.onClickShowOrientador = function(){
-        //Desenvolver...
-    }
 
     /**
      * Abrir Módulo - Orientador
      */
     $scope.onClickShowOrientador = function(){
-        //Desenvolver...
+        $scope.loadView =  'view/orientadorView.html';
     }
 
     /**
      * Abrir Módulo - Publicação
      */
     $scope.onClickShowPublicacao = function(){
-        //Desenvolver...
+        $scope.loadView =  'view/publicacaoView.html';
     }
 
     /**
      * Abrir Módulo - Curso
      */
     $scope.onClickShowCurso = function(){
-        //Desenvolver...
+        $scope.loadView =  'view/cursoView.html';
     }
 
     /**

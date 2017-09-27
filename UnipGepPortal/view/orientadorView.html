@@ -1,0 +1,81 @@
+<!--
+ View - Orientador
+-->
+<div ng-controller="OrientadorController">
+
+    <!-- Controles de Inclusão e Consulta -->
+    <div class="row" style="margin-left: 10px;">
+        <div class="col-md-9 col-sm-6 col-xs-12">
+
+                    <div class="form-group mb-2 mr-sm-2 mb-sm-0">
+                        <label for="txtConsultar">Consulta de Orientadores</label>
+                        <input type="text"  ng-model="orientadorDescricao" class="form-control" id="txtConsultar" placeholder="Informe o Orientador para consultar">
+                    </div>
+         </div>
+        <div class="col-md-1 col-sm-6 col-xs-12">
+            <button style="position: relative;top: 23px;" type="button" ng-click="findOrientador()" class="btn btn-success">Consultar <i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+        <div class="col-md-1 col-sm-6 col-xs-12" style="margin-left: 23px;">
+            <button style="position: relative;top: 23px;" type="button" ng-click="incluir()" class="btn btn-success"><i class="fa fa-file-o" aria-hidden="true"></i> Incluir</button>
+        </div>
+    </div>
+
+
+    <!-- GRID -->
+    <div class="row">
+        <div class="col-md-12 col-sm-6 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Sigla</th>
+                            <th>Descrição</th>
+                            <th>Ativo</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="orientador in collectionOrientador" >
+                            <th scope="row">{{orientador.idOrientador}}</th>
+                            <td>{{orientador.sigla}}</td>
+                            <td>{{orientador.descricao}}</td>
+                            <td>{{orientador.ativo}}</td>
+                            <td style="width: 20px;">
+                                <button ng-click="openWindow(orientador)" type="button" class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL ORIENTADOR-->
+    <!-- Modal -->
+    <div class="modal fade" id="modalOrientador" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Orientador</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Adicionar o Formulário</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
