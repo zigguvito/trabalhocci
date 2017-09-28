@@ -38,6 +38,6 @@ cd trabalhocci
 
 Verifiquem se o link executará normalmente com o xampp ativo:
 
-[UnipGepPortal](localhost/trabalhocci/UnipGepPortal/index.html)
-[UnipGepPortalProvider API Aluno](localhost/trabalhocci/UnipGepPortalProvider/api/aluno)
+[UnipGepPortal](http://localhost/trabalhocci/UnipGepPortal/index.html)
+[UnipGepPortalProvider API Aluno](http://localhost/trabalhocci/UnipGepPortalProvider/api/aluno)
 
